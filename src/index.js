@@ -3,10 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import AllStocks from "./pages/main_all_stocks";
-import About from "./pages/about";
-import SingleStock from "./pages/single_stock";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./pages/main";
 
 const router = createBrowserRouter([
   {
@@ -15,15 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <AllStocks />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/stock/:symbol",
-        element: <SingleStock />,
+        element: <Main />,
       },
     ],
   },
